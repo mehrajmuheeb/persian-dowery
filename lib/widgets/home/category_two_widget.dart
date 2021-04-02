@@ -135,7 +135,7 @@ class _CategoryTwoWidgetState extends State<CategoryTwoWidget> {
                         borderRadius: BorderRadius.circular(10),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         child: Image.asset(
-                          'images/banner_image_1.jpg',
+                          'web/assets/images/banner_image_1.jpg',
                           height: 300,
                           width: 250,
                           fit: BoxFit.fill,
@@ -155,7 +155,7 @@ class _CategoryTwoWidgetState extends State<CategoryTwoWidget> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: Image.asset(
-                          'images/banner_img_3.jpg',
+                          'web/assets/images/banner_img_3.jpg',
                           height: 300,
                           width: 250,
                           fit: BoxFit.fill,

@@ -86,7 +86,7 @@ class _BannerRowWidgetState extends State<BannerRowWidget> {
                         borderRadius: BorderRadius.circular(20),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         child: Image.asset(
-                          'images/banner_image_1.jpg',
+                          'web/assets/images/banner_image_1.jpg',
                           height: 250,
                           width: 200,
                           fit: BoxFit.fill,
@@ -106,7 +106,7 @@ class _BannerRowWidgetState extends State<BannerRowWidget> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.asset(
-                          'images/banner_img_3.jpg',
+                          'web/assets/images/banner_img_3.jpg',
                           height: 300,
                           width: 200,
                           fit: BoxFit.fill,
@@ -125,8 +125,8 @@ class _BannerRowWidgetState extends State<BannerRowWidget> {
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'assets/images/carpet_1.jpg',
+                        child: Image.asset(
+                          'web/assets/images/carpet_1.jpg',
                           height: 170,
                           width: 300,
                           fit: BoxFit.cover,

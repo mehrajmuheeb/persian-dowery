@@ -45,20 +45,20 @@ flutter:
 
 
   assets:
-    - assets/images/ic_logo.png
-    - assets/images/carpet_1.jpg
-    - assets/images/banner_img_3.jpg
-    - assets/images/banner_image_1.jpg
+    - web/assets/images/ic_logo.png
+    - web/assets/images/carpet_1.jpg
+    - web/assets/images/banner_img_3.jpg
+    - web/assets/images/banner_image_1.jpg
 
   fonts:
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto-Medium.ttf
-        - asset: assets/fonts/Roboto-Bold.ttf
-        - asset: assets/fonts/Roboto-Thin.ttf
+        - asset: web/assets/fonts/Roboto-Regular.ttf
+        - asset: web/assets/fonts/Roboto-Medium.ttf
+        - asset: web/assets/fonts/Roboto-Bold.ttf
+        - asset: web/assets/fonts/Roboto-Thin.ttf
           style: normal
-        - asset: assets/fonts/Roboto-Light.ttf
+        - asset: web/assets/fonts/Roboto-Light.ttf
 
     - family: WorkSans
       fonts:
