@@ -6,7 +6,7 @@ import 'package:flutter_cmoon_icons/flutter_cmoon_icons.dart';
 
 final labelStyle = TextStyle(
     fontFamily: "WorkSans",
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.bold,
     fontSize: 20,
     color: colorTertiary);
 
@@ -14,7 +14,7 @@ final descriptionStyle = TextStyle(
     fontFamily: "WorkSansThin",
     fontWeight: FontWeight.normal,
     fontStyle: FontStyle.normal,
-    fontSize: 16,
+    fontSize: 14,
     color: colorPrimary);
 
 class FooterWidget extends StatefulWidget {
@@ -47,6 +47,13 @@ class _FooterWidgetState extends State<FooterWidget> {
                   Text(
                     "+91-7780808080, +91-7780808080, +91-7780808080",
                     style: descriptionStyle,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4.0),
+                    child: Text(
+                      "Rainawari, Srinagar, J&K, 190003",
+                      style: descriptionStyle,
+                    ),
                   )
                 ],
               ),
@@ -57,20 +64,21 @@ class _FooterWidgetState extends State<FooterWidget> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Text(
-                    "Follow us on",
-                    style: labelStyle,
-                  ),
+                  // Text(
+                  //   "Follow us on",
+                  //   style: labelStyle,
+                  // ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 30,
-                          height: 30,
+                          width: 50,
+                          height: 50,
                           child: FloatingActionButton(
                             onPressed: () {},
+                            backgroundColor: colorTertiary,
                             child: Icon(
                               MyFlutterApp.facebook_1,
                               size: 20,
@@ -81,10 +89,11 @@ class _FooterWidgetState extends State<FooterWidget> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 30,
-                          height: 30,
+                          width: 50,
+                          height: 50,
                           child: FloatingActionButton(
                             onPressed: () {},
+                            backgroundColor: colorTertiary,
                             child: Icon(
                               MyFlutterApp.twitter,
                               size: 20,
@@ -95,10 +104,11 @@ class _FooterWidgetState extends State<FooterWidget> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 30,
-                          height: 30,
+                          width: 50,
+                          height: 50,
                           child: FloatingActionButton(
                             onPressed: () {},
+                            backgroundColor: colorTertiary,
                             child: Icon(
                               MyFlutterApp.instagram,
                               size: 20,
@@ -111,23 +121,23 @@ class _FooterWidgetState extends State<FooterWidget> {
                 ],
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "We are at",
-                    style: labelStyle,
-                  ),
-                  Text(
-                    "Rainawari, Srinagar, J&K, 190003",
-                    style: descriptionStyle,
-                  )
-                ],
-              ),
-            ),
+            // Expanded(
+            //   flex: 1,
+            //   child: Column(
+            //     mainAxisAlignment: MainAxisAlignment.start,
+            //     crossAxisAlignment: CrossAxisAlignment.start,
+            //     children: [
+            //       Text(
+            //         "We are at",
+            //         style: labelStyle,
+            //       ),
+            //       Text(
+            //         "Rainawari, Srinagar, J&K, 190003",
+            //         style: descriptionStyle,
+            //       )
+            //     ],
+            //   ),
+            // ),
           ],
         ),
       ),

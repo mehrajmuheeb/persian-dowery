@@ -9,9 +9,10 @@ class BannerRowWidget extends StatefulWidget {
 class _BannerRowWidgetState extends State<BannerRowWidget> {
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height - 75;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Expanded(
           flex: 1,
@@ -69,72 +70,74 @@ class _BannerRowWidgetState extends State<BannerRowWidget> {
             flex: 1,
             child: Container(
               height: height,
-              child: Stack(
-                clipBehavior: Clip.none,
-                fit: StackFit.loose,
-                children: [
-                  Positioned(
-                    top: 250,
-                    left: 170,
-                    child: Card(
-                      elevation: 20,
-                      shadowColor: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        clipBehavior: Clip.antiAliasWithSaveLayer,
-                        child: Image.asset(
-                          'web/assets/images/banner_image_1.jpg',
-                          height: 250,
-                          width: 200,
-                          fit: BoxFit.fill,
+              child: Center(
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  fit: StackFit.loose,
+                  children: [
+                    Positioned(
+                      bottom: height/5,
+                      left: width/8,
+                      child: Card(
+                        elevation: 20,
+                        shadowColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          child: Image.asset(
+                            'web/assets/images/banner_image_1.jpg',
+                            height: height/2.5,
+                            width: width/7,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    top: 50,
-                    left: 0,
-                    child: Card(
-                      elevation: 20,
-                      shadowColor: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.asset(
-                          'web/assets/images/banner_img_3.jpg',
-                          height: 300,
-                          width: 200,
-                          fit: BoxFit.fill,
+                    Positioned(
+                      top: height/9,
+                      left: 0,
+                      child: Card(
+                        elevation: 20,
+                        shadowColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'web/assets/images/banner_img_3.jpg',
+                            height: height / 2.4,
+                            width: width/7,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    top: 20,
-                    left: 140,
-                    child: Card(
-                      elevation: 20,
-                      shadowColor: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.asset(
-                          'web/assets/images/carpet_1.jpg',
-                          height: 170,
-                          width: 300,
-                          fit: BoxFit.cover,
+                    Positioned(
+                      top: height/30,
+                      left: width/10,
+                      child: Card(
+                        elevation: 20,
+                        shadowColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'web/assets/images/carpet_1.jpg',
+                            height: height/4,
+                            width: width/4,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             ))
       ],
