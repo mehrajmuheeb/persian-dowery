@@ -28,6 +28,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_cmoon_icons: ^0.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +51,11 @@ flutter:
     - web/assets/images/carpet_1.jpg
     - web/assets/images/banner_img_3.jpg
     - web/assets/images/banner_image_1.jpg
+    - web/assets/images/pp_mache.jpg
+    - web/assets/images/manufacture.png
+    - web/assets/images/export.png
+    - web/assets/images/retail.png
+    - web/assets/images/showroom.png
 
   fonts:
     - family: Roboto
@@ -65,8 +72,15 @@ flutter:
       - asset: assets/fonts/WorkSans-Regular.ttf
       - asset: assets/fonts/WorkSans-Medium.ttf
       - asset: assets/fonts/WorkSans-Bold.ttf
-      - asset: assets/fonts/WorkSans-Thin.ttf
         style: normal
+
+    - family: WorkSansLight
+      fonts:
+        - asset: web/assets/fonts/WorkSans-Light.ttf
+
+    - family:  MyFlutterApp
+      fonts:
+      - asset: web/assets/fonts/MyFlutterApp.ttf
 
   uses-material-design: true
 

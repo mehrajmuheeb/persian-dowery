@@ -37,7 +37,7 @@ class _TopNavigationWidgetState extends State<TopNavigationWidget>
         mainAxisSize: MainAxisSize.max,
         children: [
           Image.asset(
-            'assets/images/ic_logo.png',
+            'web/assets/images/ic_logo.png',
             width: 25,
             height: 25,
           ),

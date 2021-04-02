@@ -1,8 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_pd/widgets/home/banner_row_widget.dart';
+import 'package:flutter_app_pd/widgets/home/btn_view_categories_widget.dart';
 import 'package:flutter_app_pd/widgets/home/category_one_widget.dart';
+import 'package:flutter_app_pd/widgets/home/category_three_widget.dart';
 import 'package:flutter_app_pd/widgets/home/category_two_widget.dart';
+import 'package:flutter_app_pd/widgets/home/footer_widget.dart';
+import 'package:flutter_app_pd/widgets/home/services_widget.dart';
 import 'package:flutter_app_pd/widgets/top_navigation_bar_widget.dart';
 
 void main() {
@@ -37,43 +41,26 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 64),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                TopNavigationWidget(),
-                BannerRowWidget(),
-                CategoryOneWidget(),
-                CategoryTwoWidget(),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(30),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Browse Categories",
-                            style: TextStyle(
-                                fontFamily: "WorkSans",
-                                fontStyle: FontStyle.normal,
-                                color: Colors.white,
-                                fontSize: 20),
-                          )
-                        ],
-                      ),
-                    ),
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.green)),
-                  ),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 64),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    TopNavigationWidget(),
+                    BannerRowWidget(),
+                    CategoryThreeWidget(),
+                    CategoryOneWidget(),
+                    CategoryTwoWidget(),
+                    ButtonViewCategories(),
+                    ServicesWidget(),
+                  ],
                 ),
-              ],
-            ),
+              ),
+              FooterWidget()
+            ],
           ),
         ));
   }
