@@ -5,3 +5,5 @@ const TextStyle navTextStyle = TextStyle(
   color: Colors.black,
   fontFamily: 'Roboto'
 );
+
+const screenPadding = EdgeInsets.symmetric(vertical: 16, horizontal: 64);

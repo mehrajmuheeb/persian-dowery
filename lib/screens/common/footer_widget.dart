@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_pd/custom_icons/my_flutter_app_icons.dart';
 import 'package:flutter_app_pd/styles_custom/colors.dart';
-import 'package:flutter_cmoon_icons/flutter_cmoon_icons.dart';
+import 'package:flutter_app_pd/styles_custom/my_flutter_app_icons.dart';
 
 final labelStyle = TextStyle(
     fontFamily: "WorkSans",

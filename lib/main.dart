@@ -1,13 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_pd/widgets/home/banner_row_widget.dart';
-import 'package:flutter_app_pd/widgets/home/btn_view_categories_widget.dart';
-import 'package:flutter_app_pd/widgets/home/category_one_widget.dart';
-import 'package:flutter_app_pd/widgets/home/category_three_widget.dart';
-import 'package:flutter_app_pd/widgets/home/category_two_widget.dart';
-import 'package:flutter_app_pd/widgets/home/footer_widget.dart';
-import 'package:flutter_app_pd/widgets/home/services_widget.dart';
-import 'package:flutter_app_pd/widgets/top_navigation_bar_widget.dart';
+import 'package:flutter_app_pd/screens/categories/categories_screen.dart';
+import 'package:flutter_app_pd/screens/home/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'WorkSans'),
-      home: MyHomePage(title: 'Persian Dowery'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyHomePage(),
+        '/categories': (context) => CategoriesScreen(),
+      },
     );
   }
 }
@@ -40,28 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 64),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    TopNavigationWidget(),
-                    BannerRowWidget(),
-                    CategoryThreeWidget(),
-                    CategoryOneWidget(),
-                    CategoryTwoWidget(),
-                    ButtonViewCategories(),
-                    ServicesWidget(),
-                  ],
-                ),
-              ),
-              FooterWidget()
-            ],
-          ),
-        ));
+        body: HomeScreen(),
+    );
   }
 }

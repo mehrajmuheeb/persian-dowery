@@ -1,17 +1,22 @@
-import 'dart:js';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_pd/styles_custom/colors.dart';
 import 'package:flutter_app_pd/styles_custom/text_styles.dart';
 
 class TopNavigationWidget extends StatefulWidget {
+
+  final int currentIndex;
+  TopNavigationWidget({@required this.currentIndex});
   @override
-  _TopNavigationWidgetState createState() => _TopNavigationWidgetState();
+  _TopNavigationWidgetState createState() => _TopNavigationWidgetState(currentIndex);
 }
 
 class _TopNavigationWidgetState extends State<TopNavigationWidget>
     with SingleTickerProviderStateMixin {
+
+  final int currentIndex;
+  _TopNavigationWidgetState(this.currentIndex);
+
   int selectedIndex = 0;
   int hoverIndex = 0;
   List<String> menuItems = ["Home", "About", "Testimonial", "Contact"];
@@ -21,8 +26,8 @@ class _TopNavigationWidgetState extends State<TopNavigationWidget>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    selectedIndex = currentIndex;
     _searchController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 200));
 
@@ -90,6 +95,7 @@ class _TopNavigationWidgetState extends State<TopNavigationWidget>
       InkWell(
         onTap: () {
           setState(() {
+            navigateScreen(index);
             selectedIndex = index;
           });
         },
@@ -127,4 +133,18 @@ class _TopNavigationWidgetState extends State<TopNavigationWidget>
           ),
         ),
       );
+
+  void navigateScreen (int index) {
+    switch(index) {
+      case 0:
+        Navigator.pushNamed(context, '/');
+        return;
+      case 1:
+        Navigator.pushNamed(context, '/categories');
+        return;
+      case 2:
+        Navigator.pushNamed(context, '/');
+        return;
+    }
+  }
 }
